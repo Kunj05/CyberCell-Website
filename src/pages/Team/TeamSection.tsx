@@ -18,14 +18,14 @@ const TeamSection = ({ title, members, variant = 'default', className = '' }: Te
       </h2>
       <div className={`grid grid-cols-1 md:grid-cols-3 gap-${isCompact ? '6' : '8'}`}>
         {members.map((member, index) => (
-          <AnimatedCard key={index}>
+          <AnimatedCard key={index} className="px-3">
             <div className="flex flex-col items-center">
               <div className="relative group mb-4">
                 <div className="absolute -inset-0.5 rounded-full opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 bg-blue-500/20" />
                 <img
                   src={member.image}
                   alt={member.name}
-                  className={`relative ${isCompact ? 'w-24 h-24' : 'w-32 h-32'} rounded-full object-cover border-2 border-blue-500/20 group-hover:border-blue-500/40 transition-colors duration-300`}
+                  className={`relative ${isCompact ? 'w-36 h-36' : 'w-48 h-48'} rounded-full object-cover border-2 border-blue-500/20 group-hover:border-blue-500/40 transition-colors duration-300`}
                 />
               </div>
               
